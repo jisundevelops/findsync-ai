@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400..800;1,500&family=JetBrains+Mono&display=swap');
+
+:root {
+  --bg: #F6F9FC;
+  --surface: #FFFFFF;
+  --surface-alt: #EEF2FA;
+  --surface-sunken: #F3F6FC;
+  --ink: #0B1220;
+  --ink-soft: #232C3D;
+  --slate: #57647A;
+  --slate-light: #8A96AB;
+  --border: #E4EAF4;
+  --border-soft: #EDF2FA;
+  --blue: #3B5BFF;
+  --blue-dark: #2540D6;
+  --violet: #8B5CF6;
+  --teal: #12B76A;
+  --teal-dark: #0C8F53;
+  --coral: #F45B69;
+  --coral-dark: #E23B4C;
+  --amber: #F59E0B;
+  --amber-dark: #B45A08;
+}
+
+body {
+  @apply bg-bg text-ink-soft font-sans text-base;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-sans font-extrabold text-ink tracking-heading;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.text-grad {
+  @apply bg-clip-text text-transparent bg-text-gradient;
+}
+
+/* Respect prefers-reduced-motion globally */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
